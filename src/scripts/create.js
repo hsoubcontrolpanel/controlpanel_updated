@@ -19,7 +19,7 @@ fs.readFile( "./src/components/template.html", "utf8", (err, source) => {
             fs.writeFile( `./src/assets/sass/components/${component}.scss`, '', (err) => {
                 if ( err )  return console.error(`there is a problem in creating ${component}.sass`);
             })
-            console.log(`${component} was created!`);
+            console.log(`${component} created successfully!`);
             // this step will work well in windows and Linux over visual studio code editor
             // but for macOS visual studio code users they have to install the pacakge from
             // View->Command Palette->Shell command: install "code" command in path
