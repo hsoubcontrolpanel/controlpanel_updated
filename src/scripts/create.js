@@ -20,9 +20,10 @@ fs.readFile( "./src/components/template.html", "utf8", (err, source) => {
                 if ( err )  return console.error(`there is a problem in creating ${component}.sass`);
             })
             console.log(`${component} was created!`);
-            // this step will work if you have visual studio code editor and the cli package
-            // you can install the pacakge from View->Command Palette->Shell command: install "code" command in path
-            // we open our new file, -r is so it opens in the same window
+            // this step will work well in windows and Linux over visual studio code editor
+            // but for macOS visual studio code users they have to install the pacakge from
+            // View->Command Palette->Shell command: install "code" command in path
+            // we open our new files, -r is so it opens in the same window
             exec(`code -r ./src/components/${component}.html`, (err) => {
                 if (err) return console.error(err)
             })
