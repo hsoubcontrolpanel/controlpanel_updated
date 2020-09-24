@@ -16,7 +16,7 @@ fs.readFile( "./src/components/template.html", "utf8", (err, source) => {
     fs.writeFile( `./src/components/${component}.html`, content, (err) => {
         if ( err ) return console.error(`there is a problem in creating ${component}.html`);
         else {
-            fs.writeFile( `./src/assets/sass/components/${component}.scss`, content, (err) => {
+            fs.writeFile( `./src/assets/sass/components/${component}.scss`, '', (err) => {
                 if ( err )  return console.error(`there is a problem in creating ${component}.sass`);
             })
             console.log(`${component} was created!`);
