@@ -14,22 +14,19 @@ fs.readFile( "./src/components/template.html", "utf8", (err, source) => {
     }
     // we create the file and write the content to it
     fs.writeFile( `./src/components/${component}.html`, content, (err) => {
-        if ( err ) {
-            return console.error(`there is a problem in creating ${component} compoenet, error is:\n ${err}`);
-        } else {
+        if ( err ) return console.error(`there is a problem in creating ${component}.html`);
+        else {
             fs.writeFile( `./src/assets/sass/components/${component}.scss`, content, (err) => {
-                if ( err ) {
-                    return console.error(err);
-                } 
+                if ( err )  return console.error(`there is a problem in creating ${component}.sass`);
             })
             console.log(`${component} was created!`);
             // this step will work if you have visual studio code editor and the cli package
             // you can install the pacakge from View->Command Palette->Shell command: install "code" command in path
-            // we open our new file, -r is so it opens in the same window, -g and :14:13 is for it to go to line 14 column 13
-             exec(`code -r ./src/assets/components/${component}.scss`, (err) => {
+            // we open our new file, -r is so it opens in the same window
+            exec(`code -r ./src/components/${component}.html`, (err) => {
                 if (err) return console.error(err)
             })
-            exec(`code -r -g ./src/components/${component}.html:14:13`, (err) => {
+            exec(`code -r ./src/assets/components/${component}.scss`, (err) => {
                 if (err) return console.error(err)
             })
         }
