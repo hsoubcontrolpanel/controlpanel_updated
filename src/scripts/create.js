@@ -18,17 +18,22 @@ fs.readFile( "./src/components/template.html", "utf8", (err, source) => {
         else {
             fs.writeFile( `./src/assets/sass/components/${component}.scss`, '', (err) => {
                 if ( err )  return console.error(`there is a problem in creating ${component}.sass`);
-            })
-            console.log(`${component} created successfully!`);
-            // this step will work well in windows and Linux over visual studio code editor
-            // but for macOS visual studio code users they have to install the pacakge from
-            // View->Command Palette->Shell command: install "code" command in path
-            // we open our new files, -r is so it opens in the same window
-            exec(`code -r ./src/components/${component}.html`, (err) => {
-                if (err) return console.error(err)
-            })
-            exec(`code -r ./src/assets/components/${component}.scss`, (err) => {
-                if (err) return console.error(err)
+                console.log(`${component} created successfully!`);
+                // include component's style file in _components.scss
+                fs.appendFile(`./src/assets/sass/components/_components.scss`, `@import "${component}";\n`, (err) => {
+                    if ( err )  return console.error(`there is a problem in appending ${component}.sass`);
+                    console.log(`${component} appended successfully!`);
+                    // this step will work well in windows and Linux over visual studio code editor
+                    // but for macOS visual studio code users they have to install the pacakge from
+                    // View->Command Palette->Shell command: install "code" command in path
+                    // we open our new files -r is it open in the same window
+                    exec(`code -r ./src/components/${component}.html`, (err) => {
+                        if (err) return console.error(err)
+                    })
+                    exec(`code -r ./src/assets/components/${component}.scss`, (err) => {
+                        if (err) return console.error(err)
+                    })
+                })
             })
         }
     })
