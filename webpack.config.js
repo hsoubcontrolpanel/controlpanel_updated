@@ -206,13 +206,7 @@ module.exports = {
         template: "./src/components/tabs.html",
         chunks: ['main', 'assets/js/tabs']
     }),
-
-    new HtmlWebpackPlugin({ 
-        filename: "components/template.html",
-        template: "./src/components/template.html",
-        chunks: ['main']
-    }),
-
+    
     new HtmlWebpackPlugin({ 
         filename: "components/textfield.html",
         template: "./src/components/textfield.html",
