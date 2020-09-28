@@ -23,10 +23,19 @@
 }
 
 .c-card__desc {
-    flex-basis: 100%;
+    width: 100%;
     font-size: 14px;
 }
 
 .c-card--no-desc {
     align-items: center;
+    .c-card__title{
+        margin-bottom: 0px;
+    }
+}
+
+.c-card--no-action {
+    .c-card__title{
+        margin-top: 0px;
+    }
 }

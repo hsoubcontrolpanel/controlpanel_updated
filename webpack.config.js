@@ -39,16 +39,16 @@ module.exports = {
       {
         test: /\.(sa|sc|c)ss$/,
         use: [
-            MiniCssExtractPlugin.loader, 
-            // 'style-loader',
-            'css-loader', 
-            'postcss-loader',
-            'sass-loader'
+          MiniCssExtractPlugin.loader, 
+          'css-loader', 
+          'postcss-loader',
+          'sass-loader'
         ]
       },
 
       {
         test: /\.(png|svg|jpe?g|gif)$/,
+        exclude: /fonts/,
         use: [
           {
             loader: "file-loader", 
@@ -61,28 +61,14 @@ module.exports = {
       },
 
       {
-        test: /\.(eot|woff|woff2|ttf)$/,
-        exclude: /icons/,
-        use: [
-          {
-            loader: "file-loader", 
-            options: {
-              name: '[name].[ext]',
-              outputPath: "/assets/fonts",
-            }
-          }
-        ]
-      },
-
-       {
-        test: /.[sicon]\.(svg|eot|woff|woff2|ttf)$/,
+        test: /\.(svg|eot|woff|woff2|ttf)$/,
         exclude: /images/,
         use: [
           {
             loader: "file-loader", 
             options: {
               name: '[name].[ext]',
-              outputPath: "/assets/fonts/icons",
+              outputPath: "/assets/fonts",
             }
           }
         ]
@@ -240,8 +226,6 @@ module.exports = {
     new MiniCssExtractPlugin({filename: "assets/css/styles.css"}),
 
     new OptimizeCSSAssetsPlugin({}),
-
-  
   ],
   
 }
