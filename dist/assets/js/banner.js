@@ -457,7 +457,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("(function () {\n  var closeBanners = document.querySelectorAll(\".js-banner-close\");\n  closeBanners.forEach(function (closeBanner) {\n    closeBanner.addEventListener(\"click\", function (event) {\n      var banner = event.target.parentNode;\n      banner.classList.add(\"collapse\");\n      banner.addEventListener(\"transitionend\", function (event) {\n        if (event.target === this) {\n          this.remove();\n        }\n      });\n    });\n  });\n})();\n\n//# sourceURL=webpack:///./src/assets/js/banner.js?");
+eval("(function () {\n  var closeBanners = document.querySelectorAll(\".c-banner__close\");\n  closeBanners.forEach(function (closeBanner) {\n    closeBanner.addEventListener(\"click\", function (event) {\n      var banner = event.target.parentNode;\n      banner.classList.add(\"collapse\");\n      banner.addEventListener(\"transitionend\", function (event) {\n        if (event.target === this) {\n          this.remove();\n        }\n      });\n    });\n  });\n})();\n\n//# sourceURL=webpack:///./src/assets/js/banner.js?");
 
 /***/ }),
 
