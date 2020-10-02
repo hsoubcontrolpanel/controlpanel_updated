@@ -30,7 +30,7 @@ fs.readFile( "./src/components/template.html", "utf8", (err, source) => {
                     exec(`code -r ./src/components/${component}.html`, (err) => {
                         if (err) return console.error(err)
                     })
-                    exec(`code -r ./src/assets/components/${component}.scss`, (err) => {
+                    exec(`code -r ./src/assets/sass/components/${component}.scss`, (err) => {
                         if (err) return console.error(err)
                     })
                 })
