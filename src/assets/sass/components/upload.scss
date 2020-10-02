@@ -48,7 +48,6 @@ $upload-size: 400px;
   img {
     max-width: 100%;
     height: auto;
-    display: none;
   }
 }
 
@@ -99,11 +98,6 @@ $upload-size: 400px;
 .has-image.c-upload {
   .c-upload__label--remove {
     display: block;
-  }
-  &--small .c-upload__body {
-    .c-upload__label {
-      display: none;
-    }
   }
 
   .c-upload__image {

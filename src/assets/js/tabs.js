@@ -3,26 +3,27 @@
 
   Array.from(tabs, tab => {
     const tabsLinks = tab.querySelectorAll(".js-tab-link");
-    let currentTab = tab.querySelector(".js-tab-link.is-active");
+    let currentActiveTab = tab.querySelector(".js-tab-link.is-active");
 
-    const toggleTab = (toggledTabLink = currentTab) => {
-      currentTab = toggledTabLink || currentTab;
+    const toggleTab = (toggledTabLink = currentActiveTab) => {
+      currentActiveTab = toggledTabLink || currentActiveTab;
       toggledTabLink.classList.toggle("is-active");
       const toggledTabData = toggledTabLink.dataset.index;
       const toggledTabArea = tab.querySelector(`.js-tab-area[data-indexed=${toggledTabData}]`);
       toggledTabArea.classList.toggle("is-active")
     }
-    if (!currentTab) {
+    
+    if (!currentActiveTab) {
       toggleTab(tabsLinks[0]);
     }
 
     tabsLinks.forEach(tabsLink => {
       tabsLink.addEventListener("click", function(event) {
-        if (currentTab === this) {
+        if (currentActiveTab === this) {
           return;
         }
 
-        if (currentTab) {
+        if (currentActiveTab) {
           toggleTab();
         }
 
