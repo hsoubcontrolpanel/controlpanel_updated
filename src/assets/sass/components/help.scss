@@ -5,21 +5,15 @@
   border-radius: (spacing("small") * 2);
   border: 1px solid rgba(darken($color-primary, 30%), 0.15);
   background: white;
-  padding: spacing("base");
+  padding: spacing();
   margin: spacing("wide") auto;
-  width: 300px;
-  width: -moz-fit-content;
   width: fit-content;
 }
 
 .c-help__icon {
+  font-size: 20px;
   color: $color-primary;
-  width: 20px;
-  height: 20px;
   margin-left: spacing("extra-small");
 }
 
-.c-icon--lifebuoy {
-  font-size: 20px;
-}
 
