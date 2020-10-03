@@ -5,6 +5,7 @@ $sidebar-normal-padding: spacing("small");
 $sidebar-dense-padding: spacing("base");
 $shift: $sidebar-normal-padding - $sidebar-dense-padding;
 $dense-width: $sidebar-control-width + ($sidebar-dense-padding * 2) + $shift;
+
 .c-sidebar {
   width: $layout-sidebar;
   height: 100vh;
@@ -51,8 +52,7 @@ $dense-width: $sidebar-control-width + ($sidebar-dense-padding * 2) + $shift;
 }
 
 .c-sidebar__logo {
-  margin: 0;
-  margin-bottom: spacing("normal");
+  margin: 0 0 spacing("normal") 0;
   svg {
     stroke: $color-brand;
   }
@@ -99,7 +99,6 @@ $dense-width: $sidebar-control-width + ($sidebar-dense-padding * 2) + $shift;
 }
 
 @media(max-width: $bp-sidebar) {
-
 
   .c-sidebar {
     transform: translateX($shift);
