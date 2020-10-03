@@ -12,7 +12,7 @@ $indicator-size: 10px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
   padding: (spacing("extra-small") / 2) (spacing("extra-small")) (spacing("extra-small") / 2) (spacing("extra-small"));
   &:last-child {
     border-bottom: none;
@@ -21,13 +21,9 @@ $indicator-size: 10px;
 
 .c-action__title {
   font-size: 14px;
-  // margin-left: auto;
+  margin-left: auto;
   display: flex;
   align-items: center;
-}
-
-.c-action__link{
-  margin-right: auto;
 }
 
 .c-action__link,
@@ -35,7 +31,6 @@ $indicator-size: 10px;
   margin-top: spacing("extra-small") / 2;
   margin-bottom: spacing("extra-small") / 2;
 }
-
 .c-action__title:before {
   content: "";
   width: $indicator-size;
@@ -43,24 +38,24 @@ $indicator-size: 10px;
   border-radius: $indicator-size / 2;
   background-color: $color-brand;
   display: block;
-  margin-left: spacing();
+  margin-left: spacing("base");
 }
 
-// .c-actions--oneline {
-//     .c-action {
-//     flex-wrap: nowrap;
-//   }
-//   .c-action__title {
-//     white-space: nowrap;
-//     overflow: hidden;
-//     text-overflow: ellipsis;
-//     position: relative;
-//     display: block;
-//     padding-right: $indicator-size + spacing("extra-small");
-//     &:before {
-//       position: absolute;
-//       right: 0;
-//       top: calc(50% - #{$indicator-size / 2});
-//     }
-//   }
-// }
+.c-actions--oneline {
+    .c-action {
+    flex-wrap: nowrap;
+  }
+  .c-action__title {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    position: relative;
+    display: block;
+    padding-right: $indicator-size + spacing("extra-small");
+    &:before {
+      position: absolute;
+      right: 0;
+      top: calc(50% - #{$indicator-size / 2});
+    }
+  }
+}
