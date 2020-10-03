@@ -457,7 +457,7 @@ eval("var logLevel = \"info\";\n\nfunction dummy() {}\n\nfunction shouldLog(leve
 /*! no static exports found */
 /***/ (function(module, exports) {
 
-eval("(function () {\n  var tabs = document.querySelectorAll(\".js-tabs\");\n  Array.from(tabs, function (tab) {\n    var tabsLinks = tab.querySelectorAll(\".js-tab-link\");\n    var currentTab = tab.querySelector(\".js-tab-link.is-active\");\n\n    var toggleTab = function toggleTab() {\n      var toggledTabLink = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : currentTab;\n      currentTab = toggledTabLink || currentTab;\n      toggledTabLink.classList.toggle(\"is-active\");\n      var toggledTabData = toggledTabLink.dataset.index;\n      var toggledTabArea = tab.querySelector(\".js-tab-area[data-indexed=\".concat(toggledTabData, \"]\"));\n      toggledTabArea.classList.toggle(\"is-active\");\n    };\n\n    if (!currentTab) {\n      toggleTab(tabsLinks[0]);\n    }\n\n    tabsLinks.forEach(function (tabsLink) {\n      tabsLink.addEventListener(\"click\", function (event) {\n        if (currentTab === this) {\n          return;\n        }\n\n        if (currentTab) {\n          toggleTab();\n        }\n\n        toggleTab(this);\n      });\n    });\n  });\n})();\n\n//# sourceURL=webpack:///./src/assets/js/tabs.js?");
+eval("(function () {\n  var tabs = document.querySelectorAll(\".js-tabs\");\n  Array.from(tabs, function (tab) {\n    var tabsLinks = tab.querySelectorAll(\".js-tab-link\");\n    var currentActiveTab = tab.querySelector(\".js-tab-link.is-active\");\n\n    var toggleTab = function toggleTab() {\n      var toggledTabLink = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : currentActiveTab;\n      currentActiveTab = toggledTabLink || currentActiveTab;\n      toggledTabLink.classList.toggle(\"is-active\");\n      var toggledTabData = toggledTabLink.dataset.index;\n      var toggledTabArea = tab.querySelector(\".js-tab-area[data-indexed=\".concat(toggledTabData, \"]\"));\n      toggledTabArea.classList.toggle(\"is-active\");\n    };\n\n    if (!currentActiveTab) {\n      toggleTab(tabsLinks[0]);\n    }\n\n    tabsLinks.forEach(function (tabsLink) {\n      tabsLink.addEventListener(\"click\", function (event) {\n        if (currentActiveTab === this) {\n          return;\n        }\n\n        if (currentActiveTab) {\n          toggleTab();\n        }\n\n        toggleTab(this);\n      });\n    });\n  });\n})();\n\n//# sourceURL=webpack:///./src/assets/js/tabs.js?");
 
 /***/ }),
 
@@ -468,7 +468,7 @@ eval("(function () {\n  var tabs = document.querySelectorAll(\".js-tabs\");\n  A
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! C:\\Users\\CityTech\\Desktop\\Control-panel\\newcontrol\\hsoubcontrolpanel\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:8083 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:8083\");\nmodule.exports = __webpack_require__(/*! ./src/assets/js/tabs.js */\"./src/assets/js/tabs.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
+eval("__webpack_require__(/*! E:\\maktab\\Control-panel\\newcontrol\\hsoubcontrolpanel\\node_modules\\webpack-dev-server\\client\\index.js?http://localhost:8083 */\"./node_modules/webpack-dev-server/client/index.js?http://localhost:8083\");\nmodule.exports = __webpack_require__(/*! ./src/assets/js/tabs.js */\"./src/assets/js/tabs.js\");\n\n\n//# sourceURL=webpack:///multi_(webpack)-dev-server/client?");
 
 /***/ })
 
