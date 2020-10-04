@@ -11,7 +11,7 @@ module.exports = {
     'assets/js/banner': './src/assets/js/banner.js',
     'assets/js/chart': './src/assets/js/chart.js',
     'assets/js/tabs': './src/assets/js/tabs.js',
-    'assets/js/upload': './src/assets/js/upload.js',
+    'assets/js/upload': './src/assets/js/upload.js'
   },
   output: {
     path: path.join(__dirname, "/dist"),
