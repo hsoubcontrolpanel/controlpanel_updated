@@ -31,6 +31,7 @@ $indicator-size: 10px;
   margin-top: spacing("extra-small") / 2;
   margin-bottom: spacing("extra-small") / 2;
 }
+
 .c-action__title:before {
   content: "";
   width: $indicator-size;
@@ -42,15 +43,15 @@ $indicator-size: 10px;
 }
 
 .c-actions--oneline {
-    .c-action {
-    flex-wrap: nowrap;
-  }
+  .c-action {
+      flex-wrap: nowrap;
+    }
   .c-action__title {
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
     position: relative;
-    display: block;
+    display: inline;
     padding-right: $indicator-size + spacing("extra-small");
     &:before {
       position: absolute;

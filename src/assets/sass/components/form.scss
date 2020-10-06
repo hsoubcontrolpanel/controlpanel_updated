@@ -8,7 +8,7 @@
   align-items: baseline;
   justify-content: space-between;
   > * {
-    flex: 1 1 auto;
+    flex: 0 1 auto;
     margin-right: spacing("small");
     margin-left: spacing("small");
   }

@@ -11,14 +11,14 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: wrap;
   margin-top: spacing("extra-wide");
   margin-bottom: spacing("wide");
+  flex-wrap: wrap;
 }
 
-.welcome-tag {
-  font-size: 28px;
-}
+// .welcome-tag {
+//   font-size: 28px;
+// }
 
 @media (max-width: $bp-sidebar) {
   .page-container {
