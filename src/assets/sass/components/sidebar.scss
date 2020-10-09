@@ -2,7 +2,7 @@ $sidebar-control-width: 35px;
 $sidebar-icon-size: 20px;
 $sidebar-logo-height: $sidebar-control-width;
 $sidebar-normal-padding: spacing("small");
-$sidebar-dense-padding: spacing("base");
+$sidebar-dense-padding: spacing();
 $shift: $sidebar-normal-padding - $sidebar-dense-padding;
 $dense-width: $sidebar-control-width + ($sidebar-dense-padding * 2) + $shift;
 

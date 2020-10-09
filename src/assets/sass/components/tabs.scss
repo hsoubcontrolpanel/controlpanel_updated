@@ -7,7 +7,6 @@
 .c-tabs__controller {
   display: flex;
   overflow-x: auto;
-  position: static;
   &:before {
     content: "";
     width: 100%;
@@ -15,7 +14,7 @@
     height: floor(($line-height * $font-base) + spacing("base") * 2) ;
     position: absolute;
     top: 0;
-    right: 0;
+    left: 0;
     background: linear-gradient(90deg, white 20px, transparent 30px);
   }
 }
