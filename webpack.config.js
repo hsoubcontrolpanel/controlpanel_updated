@@ -1,5 +1,4 @@
 var path = require("path");
-const ASSET_PATH = process.env.ASSET_PATH || '/';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -16,7 +15,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "/dist"),
-    publicPath: ASSET_PATH,
+    publicPath: '/',
     filename: '[name].js',
   }, 
 
