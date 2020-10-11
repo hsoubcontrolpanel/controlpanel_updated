@@ -1,4 +1,5 @@
 var path = require("path");
+const ASSET_PATH = process.env.ASSET_PATH || '/';
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
@@ -15,6 +16,7 @@ module.exports = {
   },
   output: {
     path: path.join(__dirname, "/dist"),
+    publicPath: ASSET_PATH,
     filename: '[name].js',
   }, 
 
@@ -54,7 +56,7 @@ module.exports = {
             loader: "file-loader", 
             options: {
               name: '[name].[ext]',
-              outputPath: "/assets/images",
+              outputPath: "assets/images",
             }
           }
         ]
@@ -68,7 +70,7 @@ module.exports = {
             loader: "file-loader", 
             options: {
               name: '[name].[ext]',
-              outputPath: "/assets/fonts",
+              outputPath: "assets/fonts",
             }
           }
         ]
