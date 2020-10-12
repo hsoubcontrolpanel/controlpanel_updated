@@ -7,14 +7,14 @@ const HtmlWebpackPartialsPlugin = require("html-webpack-partials-plugin");
 
 module.exports = {
   entry:  {
-    'main': './src/index.js',
+    'app': './src/index.js',
     'assets/js/banner': './src/assets/js/banner.js',
     'assets/js/chart': './src/assets/js/chart.js',
     'assets/js/tabs': './src/assets/js/tabs.js',
     'assets/js/upload': './src/assets/js/upload.js'
   },
   output: {
-    path: path.join(__dirname, "/dist"),
+    path: path.join(__dirname, "/app"),
     publicPath: '/',
     filename: '[name].js',
   }, 
@@ -95,115 +95,115 @@ module.exports = {
     new HtmlWebpackPlugin({ 
         filename: "index.html",
         template: "./src/index.html",
-        chunks: ['main', 'assets/js/banner', 'assets/js/tabs', 'assets/js/chart']
+        chunks: ['app', 'assets/js/banner', 'assets/js/tabs', 'assets/js/chart']
     }),
 
     new HtmlWebpackPlugin({ 
       filename: "add-product.html",
       template: "./src/add-product.html",
-      chunks: ['main', 'assets/js/upload']
+      chunks: ['app', 'assets/js/upload']
     }),
 
     new HtmlWebpackPlugin({ 
       filename: "add-user.html",
       template: "./src/add-user.html",
-      chunks: ['main', 'assets/js/upload']
+      chunks: ['app', 'assets/js/upload']
     }),
 
     new HtmlWebpackPlugin({ 
       filename: "orders.html",
       template: "./src/orders.html",
-      chunks: ['main']
+      chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
       filename: "products.html",
       template: "./src/products.html",
-      chunks: ['main']
+      chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
       filename: "users.html",
       template: "./src/users.html",
-      chunks: ['main']
+      chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/actions.html",
         template: "./src/components/actions.html",
-        chunks: ['main'],
+        chunks: ['app'],
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/banner.html",
         template: "./src/components/banner.html",
-        chunks: ['main', 'assets/js/banner']
+        chunks: ['app', 'assets/js/banner']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/button.html",
         template: "./src/components/button.html",
-        chunks: ['main']
+        chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/card.html",
         template: "./src/components/card.html",
-        chunks: ['main']
+        chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/chart.html",
         template: "./src/components/chart.html",
-        chunks: ['main', 'assets/js/chart']
+        chunks: ['app', 'assets/js/chart']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/help.html",
         template: "./src/components/help.html",
-        chunks: ['main']
+        chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/list.html",
         template: "./src/components/list.html",
-        chunks: ['main']
+        chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/sidebar.html",
         template: "./src/components/sidebar.html",
-        chunks: ['main']
+        chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/summary.html",
         template: "./src/components/summary.html",
-        chunks: ['main']
+        chunks: ['app']
     }),
   
     new HtmlWebpackPlugin({ 
         filename: "components/table.html",
         template: "./src/components/table.html",
-        chunks: ['main']
+        chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/tabs.html",
         template: "./src/components/tabs.html",
-        chunks: ['main', 'assets/js/tabs']
+        chunks: ['app', 'assets/js/tabs']
     }),
     
     new HtmlWebpackPlugin({ 
         filename: "components/textfield.html",
         template: "./src/components/textfield.html",
-        chunks: ['main']
+        chunks: ['app']
     }),
 
     new HtmlWebpackPlugin({ 
         filename: "components/upload.html",
         template: "./src/components/upload.html",
-        chunks: ['main', 'assets/js/upload']
+        chunks: ['app', 'assets/js/upload']
     }),
 
     new HtmlWebpackPartialsPlugin({
