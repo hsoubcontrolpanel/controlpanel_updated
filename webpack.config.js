@@ -20,7 +20,7 @@ module.exports = {
   }, 
 
   devServer: {
-    contentBase: path.join(__dirname, "/dist"),
+    contentBase: path.join(__dirname, "/app"),
     port: 8083,
     writeToDisk: true,
   },
@@ -227,6 +227,7 @@ module.exports = {
     new MiniCssExtractPlugin({filename: "assets/css/styles.css"}),
 
     new OptimizeCSSAssetsPlugin({}),
+
   ],
   
 }
