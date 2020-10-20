@@ -1,4 +1,4 @@
-import '../../../node_modules/chart.js/dist/chart.min.js';
+import '../../../node_modules/chart.js/dist/Chart.min.js';
 (function(){
     const chartCanvas = document.getElementById("example-chart");
     const data = JSON.parse(chartCanvas.parentElement.dataset.values);
