@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack",
     "create": "node src/scripts/create.js",
-    "dev": "webpack-dev-server --mode development"
+    "dev": "webpack-dev-server --mode development --open"
   },
   "keywords": [],
   "author": "",
