@@ -16,10 +16,12 @@ $upload-size: 400px;
 }
 
 .c-upload__label {
-  margin-right: auto;
   color: $color-link;
   font-size: 14px;
   cursor: pointer;
+
+  margin-right: auto;
+
 }
 
 .c-upload__label--remove {
@@ -33,6 +35,7 @@ $upload-size: 400px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+
   position: relative;
 }
 
@@ -48,6 +51,7 @@ $upload-size: 400px;
   img {
     max-width: 100%;
     height: auto;
+    display: inline;
   }
 }
 
@@ -98,6 +102,13 @@ $upload-size: 400px;
 .has-image.c-upload {
   .c-upload__label--remove {
     display: block;
+  }
+
+  .c-upload__image {
+    background: none;
+    img {
+      display: block;
+    }
   }
 }
 
