@@ -4,7 +4,7 @@
   position: relative;
 }
 
-.c-tabs__controller {
+.c-tabs__control {
   display: flex;
   overflow-x: auto;
   &:before {
@@ -21,11 +21,12 @@
 
 .c-tabs__tab {
   text-align: center;
-  display: block;
   padding: spacing() spacing("small");
-  border-bottom: 3px solid transparent;
-  white-space: pre;
   flex-grow: 1;
+
+  border-bottom: 3px solid transparent;
+  
+  white-space: pre;
 }
 
 .c-tabs__tab.is-active {
